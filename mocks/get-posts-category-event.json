@@ -1,0 +1,11 @@
+{
+  "pathParameters": {
+    "category": "raju"
+  },
+
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "sagoo.karan@gmail.com"
+    }
+  }
+}

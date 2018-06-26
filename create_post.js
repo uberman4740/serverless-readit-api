@@ -21,8 +21,8 @@ export async function main(event, context, callback) {
         Item: {
             postId: uuid.v1(),
             userId: event.requestContext.identity.cognitoIdentityId,
-            timestamp: Date.now(),
-            voteScore: "0",
+            time_stamp: Date.now(),
+            voteScore: 0,
             deleted: "false",
             author: "ph_author",
             body: data.content,

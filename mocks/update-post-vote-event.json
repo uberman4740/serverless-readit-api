@@ -1,0 +1,11 @@
+{
+  "body": "{\"option\":\"upVote\"}",
+  "pathParameters": {
+    "id": "e7e5cf10-7912-11e8-a35a-0fcdce1c8a06"
+  },
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "sagoo.karan@gmail.com"
+    }
+  }
+}

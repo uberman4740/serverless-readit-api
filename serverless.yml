@@ -80,6 +80,17 @@ functions:
             method: delete
             cors: true
             authorizer: aws_iam
+  updatePostVote:
+      # Defines an HTTP API endpoint that calls the main function in update.js
+      # - path: url path is /notes/{id}
+      # - method: PUT request
+      handler: update_post_vote.main
+      events:
+        - http:
+            path: posts/{id}
+            method: put
+            cors: true
+            authorizer: aws_iam
   getPostsAll:
     # Defines an HTTP API endpoint that calls the main function in list.js
     # - path: url path is /notes
@@ -157,5 +168,16 @@ functions:
         - http:
             path: comments/{id}
             method: put
+            cors: true
+            authorizer: aws_iam
+  getCategories:
+      # Defines an HTTP API endpoint that calls the main function in update.js
+      # - path: url path is /notes/{id}
+      # - method: PUT request
+      handler: get_categories.main
+      events:
+        - http:
+            path: categories
+            method: get
             cors: true
             authorizer: aws_iam
