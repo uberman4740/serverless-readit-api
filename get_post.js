@@ -7,27 +7,28 @@ export async function main(event, context, callback) {
         // 'Key' defines the partition key and sort key of the item to be retrieved
         // - 'userId': Identity Pool identity id of the authenticated user
         // - 'noteId': path parameter
-        Key: {
-            userId: "sagoo.karan@gmail.com",
-            postId: "e7e5cf10-7912-11e8-a35a-0fcdce1c8a06"
+        KeyConditionExpression: "postId = :postId",
+
+        ExpressionAttributeValues: {
+            ":postId":event.pathParameters.id
         }
     };
 
     try {
         // const result = await dynamoDbLib.call("scan", params);
 
-        const result = await dynamoDbLib.call("get", params);
-        console.log("RRRESSSSULLTTTTT")
-        console.log(result)
-        if (result.Item) {
+        const result = await dynamoDbLib.call("query", params);
+        // console.log("RRRESSSSULLTTTTT")
+        // console.log(result)
+        if (result.Items) {
             // Return the retrieved item
 
-            callback(null, success(result.Item));
+            callback(null, success(result.Items));
         } else {
             callback(null, failure({ status: false, error: "Item not found." }));
         }
     } catch (e) {
-        console.log("FAil result,")
+        console.log("FAil result,",e)
 
         callback(null, failure({ status: false }));
 

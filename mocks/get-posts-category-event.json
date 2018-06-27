@@ -1,11 +1,5 @@
 {
   "pathParameters": {
     "id": "web3"
-  },
-
-  "requestContext": {
-    "identity": {
-      "cognitoIdentityId": "sagoo.karan@gmail.com"
-    }
   }
 }

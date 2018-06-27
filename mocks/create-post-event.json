@@ -1,8 +1,8 @@
 {
-  "body": "{\"body\":\"hello world\",\"title\":\"Second Title\",\"category\":\"engineering\"}",
+  "body": "{\"body\":\"hello world\",\"title\":\"Second Title\",\"category\":\"web3\"}",
   "requestContext": {
     "identity": {
-      "cognitoIdentityId": "sagoo.karan@gmail.com"
+      "cognitoIdentityId": "sdfdsfn@gmail.com"
     }
   }
 }

@@ -54,7 +54,7 @@ functions:
         handler: get_post.main
         events:
           - http:
-              path: posts/{PostId}
+              path: posts/{id}
               method: get
               cors: true
               authorizer: aws_iam
@@ -102,17 +102,7 @@ functions:
           method: get
           cors: true
           authorizer: aws_iam
-  categoryPostsList:
-    # Defines an HTTP API endpoint that calls the main function in list.js
-    # - path: url path is /notes
-    # - method: GET request
-    handler: get_posts_category.main
-    events:
-      - http:
-          path: category/{categoryTitle}
-          method: get
-          cors: true
-          authorizer: aws_iam
+
   createComment:
     # Defines an HTTP API endpoint that calls the main function in list.js
     # - path: url path is /notes
@@ -181,3 +171,14 @@ functions:
             method: get
             cors: true
             authorizer: aws_iam
+  categoryPostsList:
+    # Defines an HTTP API endpoint that calls the main function in list.js
+    # - path: url path is /notes
+    # - method: GET request
+    handler: get_posts_category.main
+    events:
+      - http:
+          path: categories/{id}
+          method: get
+          cors: true
+          authorizer: aws_iam
