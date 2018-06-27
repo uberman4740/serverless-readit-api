@@ -24,7 +24,7 @@ export async function main(event, context, callback) {
             time_stamp: Date.now(),
             voteScore: 0,
             deleted: "false",
-            author: "ph_author",
+            author: data.author,
             body: data.content,
             category: data.category,
             title: data.title,

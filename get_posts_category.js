@@ -7,7 +7,7 @@ export async function main(event, context, callback) {
         TableName: "posts_reddit",
         FilterExpression: "category = :category",
         ExpressionAttributeValues: {
-            ":category": event.pathParameters.categoryTitle
+            ":category": event.pathParameters.id
         }
 
 
