@@ -126,6 +126,14 @@ functions:
             cors: true
             authorizer: aws_iam
 
+  getPostComments:
+        handler: get_post_comments.main
+        events:
+          - http:
+              path: posts/{id}/comments
+              method: get
+              cors: true
+              authorizer: aws_iam
 
   deleteComment:
       # Defines an HTTP API endpoint that calls the main function in delete.js

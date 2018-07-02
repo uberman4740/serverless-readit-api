@@ -21,12 +21,12 @@ export async function main(event, context, callback) {
         Item: {
             commentId: uuid.v1(),
             userId: event.requestContext.identity.cognitoIdentityId,
-            parentId: data.parentId,
+            postId: data.postId,
             body: data.body,
             time_tamp: Date.now(),
             voteScore: 0,
             deleted: "false",
-            author: "ph_author",
+            author: data.author,
 
         }
     };

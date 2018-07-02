@@ -2,10 +2,9 @@ import * as dynamoDbLib from "./libs/dynamodb-lib";
 import { success, failure } from "./libs/response-lib";
 
 export async function main(event, context, callback) {
-    const typeVote = JSON.parse(event.body);
+    const data = JSON.parse(event.body);
     let voteValue = ""
-    console.log("type of vote: ", typeVote.option)
-    switch(typeVote.option) {
+    switch(data.option) {
         case "upVote":
             voteValue = "SET voteScore = voteScore + :inc"
             break
@@ -13,13 +12,13 @@ export async function main(event, context, callback) {
             voteValue = "SET voteScore = voteScore - :inc"
             break
         default:
-            console.log(`comments.vote received incorrect parameter: ${typeVote}`)
+            console.log(`comments.vote received incorrect parameter: ${data.option}`)
     }
     const params = {
         TableName: "posts_reddit",
         Key: {
-            userId: event.requestContext.identity.cognitoIdentityId,
-            postId: event.pathParameters.id
+            postId: event.pathParameters.id,
+            userId: data.userId
         },
         UpdateExpression: voteValue,
         ExpressionAttributeValues: {
@@ -29,7 +28,7 @@ export async function main(event, context, callback) {
     };
     try {
         const result = await dynamoDbLib.call("update", params);
-        callback(null, success({ status: true }));
+        callback(null, success(result.Attributes ));
     } catch (e) {
         callback(null, failure({ status: false }));
     }

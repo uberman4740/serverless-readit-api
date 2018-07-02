@@ -1,7 +1,7 @@
 {
-  "body": "{\"option\":\"downVote\"}",
+  "body": "{\"option\":\"upVote\",\"postId\":\"8a408840-7e18-11e8-acd1-138da3ddd276\"}",
   "pathParameters": {
-    "id": "9c532720-7906-11e8-a29e-01d095463bac"
+    "id": "7377ca70-7e3f-11e8-ac1a-ab33dcbdc65a"
   },
   "requestContext": {
     "identity": {

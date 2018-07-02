@@ -25,7 +25,7 @@ export async function main(event, context, callback) {
             voteScore: 0,
             deleted: "false",
             author: data.author,
-            body: data.content,
+            body: data.body,
             category: data.category,
             title: data.title,
         }

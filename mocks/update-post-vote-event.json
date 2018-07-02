@@ -1,11 +1,7 @@
 {
-  "body": "{\"option\":\"upVote\"}",
+  "body": "{\"option\":\"upVote\",\"userId\":\"us-east-1:2bac09e0-d165-4530-8478-ed609a6544fb\"}",
   "pathParameters": {
-    "id": "e7e5cf10-7912-11e8-a35a-0fcdce1c8a06"
-  },
-  "requestContext": {
-    "identity": {
-      "cognitoIdentityId": "sagoo.karan@gmail.com"
-    }
+    "id": "01bb9ed0-7e1b-11e8-acd1-138da3ddd276"
   }
+
 }
