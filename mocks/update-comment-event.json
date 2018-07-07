@@ -1,11 +1,7 @@
 {
-  "body": "{\"body\":\"rrrddddddrrrr world\"}",
+  "body": "{\"body\":\"rrrddddddrrrr world\",\"postId\":\"8f20dad0-7b08-11e8-b538-6f09bcae7322\"}",
   "pathParameters": {
-    "id": "9c532720-7906-11e8-a29e-01d095463bac"
-  },
-  "requestContext": {
-    "identity": {
-      "cognitoIdentityId": "sagoo.karan@gmail.com"
-    }
+    "id": "3e0b1c80-8181-11e8-9267-33e694e64da8"
   }
+
 }
