@@ -1,7 +1,7 @@
 {
-  "body": "{\"option\":\"upVote\",\"userId\":\"us-east-1:2bac09e0-d165-4530-8478-ed609a6544fb\"}",
+  "body": "{\"option\":\"updateBody\",\"userId\":\"us-east-1:2bac09e0-d165-4530-8478-ed609a6544fb\",\"title\":\"sdfs\"}",
   "pathParameters": {
-    "id": "01bb9ed0-7e1b-11e8-acd1-138da3ddd276"
+    "id": "02c062d0-80c7-11e8-a402-412d3b952a16"
   }
 
 }

@@ -12,10 +12,10 @@ export async function main(event, context, callback) {
         },
         // 'UpdateExpression' defines the attributes to be updated
         // 'ExpressionAttributeValues' defines the value in the update expression
-        UpdateExpression: "SET bodd = :boddy, time_stamp=:time_stamp",
+        UpdateExpression: "SET body = :body, time_stamp=:time_stamp",
         ExpressionAttributeValues: {
 
-            ":boddy": data.opt ? data.opt : null ,
+            ":body": data.body ? data.body : null ,
             ":time_stamp": Date.now()
         },
         ReturnValues: "ALL_NEW"
