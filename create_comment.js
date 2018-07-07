@@ -23,7 +23,7 @@ export async function main(event, context, callback) {
             userId: event.requestContext.identity.cognitoIdentityId,
             postId: data.postId,
             body: data.body,
-            time_tamp: Date.now(),
+            time_stamp: Date.now(),
             voteScore: 0,
             deleted: "false",
             author: data.author,
